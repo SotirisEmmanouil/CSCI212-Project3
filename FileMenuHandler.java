@@ -87,6 +87,6 @@ public class FileMenuHandler implements ActionListener{
 	       if (status == JFileChooser.APPROVE_OPTION) 
 	          readFromFile(chooser.getSelectedFile());	
 	       else 
-	          JOptionPane.showMessageDialog(null, "File retrieval cancelled");
+	          JOptionPane.showMessageDialog(null, "File retrieval cancelled");	//if you click cancel, this message will appear
 	  }	  
 }  

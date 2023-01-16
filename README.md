@@ -1,6 +1,6 @@
 # CSCI212-Project3
 
-Project 1 implemented via TreeMap to sort the dates. This project also contains a FileMenuHandler to accompany the GUI, not seen in the previous projects, which has two options: "Open" which opens the file to be read and "Quit" which closes the GUI. In addition to this, this project also throws a custom `IllegalArgumentExcpetion` called `IllegalDate212Excpetion` when a date on the list is not in the correct formal e.g too many digits in the date,the month is less than 1 or greater than 12, or the day is less than 1 or greater than 31.
+Project 1 implemented via TreeMap to sort the dates. This project also contains a FileMenuHandler to accompany the GUI, not seen in the previous projects, which has two options: "Open" which opens the file to be read and "Quit" which closes the GUI. In addition to this, this project also throws a custom `IllegalArgumentExcpetion` called `IllegalDate212Excpetion` when a date on the list is not in the correct formal e.g too many digits in the date,the month is less than 1 or greater than 12, or the day is less than 1 or greater than 31. Completed while taking Dr.Kenneth Lord's CSCI212 "Object Oriented Programming in Java" course in the Fall 2021 semester.
 
 ## How the GUI looks like:
 <img width="501" alt="Screenshot 2023-01-15 at 7 10 40 PM" src="https://user-images.githubusercontent.com/108318635/212577502-0127e2a8-798e-416c-b8a9-0f304c28d9bd.png">

@@ -10,3 +10,6 @@ Project 1 implemented via TreeMap to sort the dates. This project also contains 
 
 ## When you cancel a file selection
 <img width="499" alt="Screenshot 2023-01-15 at 7 11 13 PM" src="https://user-images.githubusercontent.com/108318635/212577568-7f77bedd-c8f7-4f62-82ca-1e41fafbdce8.png">
+
+## When the dates are printed:
+<img width="496" alt="Screenshot 2023-01-15 at 9 11 12 PM" src="https://user-images.githubusercontent.com/108318635/212584088-962ff8a2-9b47-4701-bb8c-eca9e14cecdb.png">

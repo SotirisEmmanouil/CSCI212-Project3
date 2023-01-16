@@ -9,50 +9,49 @@ import java.util.TreeMap;
 
 
 public class FileMenuHandler implements ActionListener{
-	  public static int tokens;								//needed variables and instances of objects
+	  public static int tokens;						   //needed variables and instances of objects
 	  public static TextFileInput DateFile,DateFile2;
 	  public static StringTokenizer DateTokens,DateTokens2;
 	  public static Date212[] DateArray;
 	  public static String[] dateListUnsorted, dateListSorted;
-	  static TreeMap<String,String> DateMap = new TreeMap <String, String>();	  //TreeMap 
+	  static TreeMap<String,String> DateMap = new TreeMap <String, String>();  //TreeMap 
 	  DateGUI date;
 	
-  public FileMenuHandler (DateGUI jf) {
+  public FileMenuHandler (DateGUI jf) {				//FileMenuHandler constructor
 	   date = jf;
 	 }
 	  
- public void actionPerformed(ActionEvent event) {		//method which how the
-	      String menuName = event.getActionCommand();		//file menu reacts when 
-	      if (menuName.equals("Open"))						//different buttons are clicked on
+ public void actionPerformed(ActionEvent event) {		//method which tells the
+	      String menuName = event.getActionCommand();	//file menu how to react when 
+	      if (menuName.equals("Open"))			//different buttons are clicked on
 	            openFile(); 
 	      else if (menuName.equals("Quit"))
 	         System.exit(0);
 	   } 
 	  
 	  
-	public static void readFromFile(File filename)  {			//method which reads the file
+	public static void readFromFile(File filename)  {				//method which reads the file
 		    int k = 0;
 		    String line, line2, file1 = filename.getAbsolutePath();
-		 		DateFile = new TextFileInput(file1);
-		 			line = DateFile.readLine();
-
-		 			while (line!=null) {									// count the amount of tokens
-		 				DateTokens = new StringTokenizer(line,",");
-		 					tokens += DateTokens.countTokens();
-		 						line = DateFile.readLine();
-		 				}
-		 				dateListUnsorted = new String[tokens];				// declare an array with the size of the tokens
-		 				DateFile2 = new TextFileInput(file1);
-			 			line2 = DateFile2.readLine();
+		   DateFile = new TextFileInput(file1);
+		   line = DateFile.readLine();
+      	   while (line!=null) {							        // count the amount of tokens
+		 DateTokens = new StringTokenizer(line,",");
+		  tokens += DateTokens.countTokens();
+		   line = DateFile.readLine();
+		 	 }
+		  dateListUnsorted = new String[tokens];				// declare an array with the size of the tokens
+		 DateFile2 = new TextFileInput(file1);
+		  line2 = DateFile2.readLine();
 			 			
-		 					while (line2!= null) {								//while there are more lines, create tokens
-		 					DateTokens2 = new StringTokenizer(line2,",");	
-		 						while (DateTokens2.hasMoreTokens()) {				//while there are more tokens, append the tokens to the array
-		 							dateListUnsorted[k++] = DateTokens2.nextToken();		
+	      while (line2!= null) {						    //while there are more lines, create tokens
+		   DateTokens2 = new StringTokenizer(line2,",");	
+	         while (DateTokens2.hasMoreTokens()) {				  //while there are more tokens, append the tokens to the array
+		    dateListUnsorted[k++] = DateTokens2.nextToken();		
 		 			}
-		 								line2= DateFile2.readLine();				//read the next line
+		 	   line2= DateFile2.readLine();				//read the next line
 		 					}
-		 					printLists(dateListUnsorted);
+		 	    printLists(dateListUnsorted);
 		 		}
 	   				
 			  						
